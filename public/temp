@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
+      rel="stylesheet"
+    />
+   
+    <title>Camera</title>
+  </head>
+
+  <body>
+    <div class="video-container p-1  bg-light bg-gradient text-dark">
+      <div class="frame" style="overflow: hidden; height: 100%">
+        <video style="height: 100%" autoplay></video>
+      </div>
+    </div>
+    <div class="filter-screen-parent"></div>
+
+    <div id="record-video">
+      <img src="https://img.icons8.com/flat-round/60/000000/record.png" />
+    </div>
+    <div id="click-picture">
+      <img src="https://img.icons8.com/ultraviolet/60/000000/camera.png" />
+    </div>
+    
+      <div class="filter-container">
+        <div>
+          <h3 class="mb-2"><i class="fa fa-random fa-xs" aria-hidden="true"></i> Filters</h3>
+        </div>
+       
+        <div  style="background-color: #f4a2613d" class="filter border border-info m-1 rounded-circle"></div>
+        <div style="background-color: #e85d0440" class="filter border border-info m-1 rounded-circle"></div>
+        <div style="background-color: #ad5d6d7a" class="filter border border-info m-1 rounded-circle"></div>
+        <div style="background-color: #2195f323" class="filter border border-info m-1 rounded-circle"></div>
+        <div style="background-color: #4caf4f31" class="filter border border-info m-1 rounded-circle"></div>
+      </div>
+    <div class="zoom">
+      <button class="zoom-in btn btn-info">
+        <i class="fa fa-search-plus fa-2x" aria-hidden="true"></i>
+      </button>
+      <button class="zoom-out btn btn-info" type="button">
+        <i class="fa fa-search-minus fa-2x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="show-gallery"></div>
+    <div class="timer">
+      <span class="minute">00</span>:<span class="second">00</span>
+    </div>
+    <!-- <div class="modal">
+        <div class="title">
+            <span style="margin-top: 10px; display: inline-block;">Gallery</span>
+            <span class="close-modal" style="float: right; margin-top: 10px; margin-right: 20px; cursor: pointer;">X</span>
+        </div>
+        <div class="gallery">
+            <div class="image">
+                <img src=''></img>
+            </div>
+            <div class="video">
+                <video src='' autoplay></video>
+            </div>
+        </div>
+    </div> -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"
+    ></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCidorEKJGIemUQxUfMn4HWE4H8S4iNlp0",
+        authDomain: "cameraapp-97270.firebaseapp.com",
+        projectId: "cameraapp-97270",
+        storageBucket: "cameraapp-97270.appspot.com",
+        messagingSenderId: "239008751685",
+        appId: "1:239008751685:web:50ca26ec021e509857c32c",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+    <script src="dbScript.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

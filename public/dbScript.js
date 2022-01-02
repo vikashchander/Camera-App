@@ -32,10 +32,10 @@ function getData() {
             if (cursor.value.type == "image") {
                 let image = document.createElement("div");
                 image.classList.add("image");
-                image.innerHTML = `<img src='${cursor.value.data}'></img>
+                image.innerHTML = `<img class="img-fluid hover-shadow rounded-3 border border-info" src='${cursor.value.data}'></img>
                 <div class="buttons">
-                    <button class="delete${cursor.value.nId}">Delete</button>
-                    <button class='download${cursor.value.nId}'>Download</button>
+                    <button class="btn btn-info delete${cursor.value.nId}"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    <button class='btn btn-info download${cursor.value.nId}'><i class="fa fa-download" aria-hidden="true"></i></button>
                 </div>`;
                 gallery.append(image);
                 let url = cursor.value.data;

@@ -146,10 +146,10 @@ let showGallery = document.querySelector(".show-gallery");
 
 showGallery.addEventListener("click", function (e) {
     let modal = document.createElement("div");
-    modal.classList.add("modal");
-    modal.innerHTML = `<div class="title">
-                        <span style="margin-top: 10px; display: inline-block;">Gallery</span>
-                        <span class="close-modal" style="float: right; margin-top: 10px; margin-right: 20px; cursor: pointer;">X</span>
+    modal.classList.add("modalz");
+    modal.innerHTML = `<div class="title"   tabindex="-1">
+                        <span class="h1" style="margin-top: 10px; display: inline-block;">Gallery</span>
+                        <span class="close-modal" style="float: right; margin-top: 10px; margin-right: 20px; cursor: pointer;"><img src="https://img.icons8.com/office/36/000000/delete-sign.png"/></span>
                     </div>
                     <div class="gallery">
                     </div>`;
